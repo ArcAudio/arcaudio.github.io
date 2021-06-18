@@ -1,0 +1,23 @@
+body,html {
+    overflow-x:hidden;
+}
+body {
+    margin:0;
+    font-family:sans-serif;
+    color:#FFF;
+}
+section {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+	height: 100vh;
+}
+.panel-1 {
+  background:#423E3B;  
+}
+.panel-2 {
+  background:#88498F;
+}
+h1 {
+    font-size:4rem;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container">
+        <section class="panel-1">
+          <h1>Keep scrolling</h1>
+        </section>
+        <section class="panel-2">
+          <h1>You're nearly there</h1>
+        </section>
+      </main>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js" integrity="sha512-jNJOCd1PIjJoUa1XTDKaPdBLNUe4OJTrltKG+70O5ghYZ943nTRGIzjObwC2JtSm1fG7T06GbUApR2eirIU/jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script  src="js/GSDevTools.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    
+<script src="ScrambleTextPlugin.js"></script> -->
+<script type="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js" integrity="sha512-tjnAmVGiveGgWkDgt8h8oqmOl3cnmQkTNUIFK2BjMz0SliBCm9l0ecN1fHiOG2mATHSYm/miXNX6tE0/5uYKMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+const container = document.querySelector(".container");
+const colors = [
+    "#0FFFFF",
+    "#000000",
+    "#DF367C",
+    "#883955",
+    "#4C3549",
+    "#88498F",
+    "#423E3B",
+    // "#FF4D80",
+    // "#FF3E41",
+    // "#DF367C",
+    // "#883955",
+    // "#4C3549",
+    // "#88498F",
+    // "#423E3B",
+];
+
+let panelCreated = false;
+let panelNum = 3;
+
+const createPanel = (index) => {
+    const section = document.createElement("section");
+    const h1 = document.createElement("h1");
+    container.appendChild(section);
+    section.appendChild(h1);
+    h1.innerHTML = `Keep scrolling`;
+    gsap.set(section, {
+        backgroundColor: colors[gsap.utils.random(0, colors.length-1, 1)],
+        className: `panel-${index}`
+    }); 
+};
+
+ScrollTrigger.create({
+    trigger: document.body,
+    start: "top top",
+    end: "bottom bottom",
+    onUpdate: (self) => {
+        let progress = self.progress.toFixed(2);
+        if (progress >= 0.9 && self.direction === 1) {
+            createPanel(panelNum++);
+            ScrollTrigger.refresh();
+        }
+    },
+});
+</script>
+</html>
