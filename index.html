@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<div class="scrollContainer">
 <body>
     <main class="container">
-        <section class="panel-1">
-          <h1>Keep scrolling</h1>
+        <section  class="panel-1">
+          <h1 >Epilepsy warning, please don't scroll too fast</h1>
         </section>
-        <section class="panel-2">
+        <section id="next" class="panel-2">
           <h1>You're nearly there</h1>
         </section>
       </main>
 </body>
-
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js" integrity="sha512-jNJOCd1PIjJoUa1XTDKaPdBLNUe4OJTrltKG+70O5ghYZ943nTRGIzjObwC2JtSm1fG7T06GbUApR2eirIU/jA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 <!-- <script  src="js/GSDevTools.js"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     
@@ -34,20 +36,48 @@ const _0x4988=['629rlrMaf','351mAOtnz','#000001','627782ldVwfz','1328JFjHNZ','18
 let panelCreated = false;
 let panelNum = 3;
 var paneltext;
+const _0x59f7=['11FEIGZd','floor','createElement','panel-','You\x27re\x20only\x20at\x20page\x20number:\x20','section','length','605397CyXXXS','You\x20got\x20this','utils','168cDWtuX','8Ikxzkq','Keep\x20scrolling','1KDEphh','Keep\x20swimming','Excess\x20screen\x20time\x20prevents\x20sleep','137554QClBDY','1HkdngJ','Keep\x20scrolling\x20if\x20you\x20really\x20want\x20to','appendChild','1436637nifYsc','set','9874HUCLQr','138725zClMOf','1503802gvgmCh','155117zZKpLZ','random','Keep\x20going'];(function(_0x3a3176,_0x113b05){const _0x4f60f2=_0x4b28;while(!![]){try{const _0x2f6918=parseInt(_0x4f60f2(0xe2))+parseInt(_0x4f60f2(0xf0))*parseInt(_0x4f60f2(0xf5))+parseInt(_0x4f60f2(0xfd))*-parseInt(_0x4f60f2(0xf6))+parseInt(_0x4f60f2(0xfc))*parseInt(_0x4f60f2(0xe5))+-parseInt(_0x4f60f2(0xec))+parseInt(_0x4f60f2(0xf9))*-parseInt(_0x4f60f2(0xf2))+parseInt(_0x4f60f2(0xfb))*parseInt(_0x4f60f2(0xef));if(_0x2f6918===_0x113b05)break;else _0x3a3176['push'](_0x3a3176['shift']());}catch(_0x4b9ff2){_0x3a3176['push'](_0x3a3176['shift']());}}}(_0x59f7,0xda638));function _0x4b28(_0x160e7c,_0x12911a){return _0x4b28=function(_0x59f7d2,_0x4b28d3){_0x59f7d2=_0x59f7d2-0xe2;let _0x1c899f=_0x59f7[_0x59f7d2];return _0x1c899f;},_0x4b28(_0x160e7c,_0x12911a);}const createPanel=_0x5b966b=>{const _0x4fadf0=_0x4b28,_0x369f03=document['createElement'](_0x4fadf0(0xea)),_0x117537=document[_0x4fadf0(0xe7)]('h1');container[_0x4fadf0(0xf8)](_0x369f03),_0x369f03[_0x4fadf0(0xf8)](_0x117537);var _0x5be3fa=Math[_0x4fadf0(0xe6)](Math['random']()*0xd);if(_0x5be3fa===0x0)paneltext=_0x4fadf0(0xf7);else{if(_0x5be3fa===0x1)paneltext=_0x4fadf0(0xf1);else{if(_0x5be3fa===0x2)paneltext='Just\x20Keep\x20scrolling';else{if(_0x5be3fa===0x3)paneltext=_0x4fadf0(0xf3);else{if(_0x5be3fa===0x4)paneltext=_0x4fadf0(0xf1);else{if(_0x5be3fa===0x5)paneltext='Just\x20a\x20few\x20more\x20and\x20you\x27ll\x20know\x20why\x20you\x20just\x20wasted\x201\x20minute\x20of\x20your\x20life\x20scrolling';else{if(_0x5be3fa===0x6)paneltext='Just\x20do\x20it';else{if(_0x5be3fa===0x7)paneltext=_0x4fadf0(0xe9)+_0x5b966b;else{if(_0x5be3fa===0x8)paneltext='Just\x20do\x20it';else{if(_0x5be3fa===0x9)paneltext='hail\x20zucc';else{if(_0x5be3fa===0xa)paneltext=_0x4fadf0(0xf4);else{if(_0x5be3fa===0xb)paneltext=_0x4fadf0(0xed);else _0x5be3fa===0xc&&(paneltext=_0x4fadf0(0xe4));}}}}}}}}}}}_0x117537['innerHTML']=paneltext,gsap[_0x4fadf0(0xfa)](_0x369f03,{'backgroundColor':colors[gsap[_0x4fadf0(0xee)][_0x4fadf0(0xe3)](0x0,colors[_0x4fadf0(0xeb)]-0x1,0x1)],'className':_0x4fadf0(0xe8)+_0x5b966b});};
 
-const _0x309b=['Keep\x20scrolling\x20if\x20you\x20really\x20want\x20to','532713Dztlbl','2592763aMizzr','innerHTML','You\x27re\x20only\x20at\x20page\x20number:\x20','3083CUaDSr','set','Keep\x20swimming','303cNPyJu','appendChild','Just\x20Keep\x20scrolling','583708upbeFp','random','panel-','length','7QuEqac','Keep\x20scrolling','151433WGyahs','1236358Sbbgtb','783964CEuJBo','1bCVENY','floor'];function _0x51ea(_0x4dda68,_0x58690d){return _0x51ea=function(_0x309bab,_0x51ea1a){_0x309bab=_0x309bab-0xf4;let _0x1d2889=_0x309b[_0x309bab];return _0x1d2889;},_0x51ea(_0x4dda68,_0x58690d);}(function(_0x13f04c,_0x2ebeb4){const _0x2fc0f2=_0x51ea;while(!![]){try{const _0x5b481e=-parseInt(_0x2fc0f2(0xf5))*-parseInt(_0x2fc0f2(0xf4))+-parseInt(_0x2fc0f2(0x102))+-parseInt(_0x2fc0f2(0xfc))*-parseInt(_0x2fc0f2(0xff))+-parseInt(_0x2fc0f2(0xf8))+-parseInt(_0x2fc0f2(0x108))*parseInt(_0x2fc0f2(0x106))+-parseInt(_0x2fc0f2(0x109))+parseInt(_0x2fc0f2(0xf9));if(_0x5b481e===_0x2ebeb4)break;else _0x13f04c['push'](_0x13f04c['shift']());}catch(_0x8609b){_0x13f04c['push'](_0x13f04c['shift']());}}}(_0x309b,0xdb412));const createPanel=_0xb772b3=>{const _0x1ede1d=_0x51ea,_0x15d670=document['createElement']('section'),_0x34e63f=document['createElement']('h1');container[_0x1ede1d(0x100)](_0x15d670),_0x15d670[_0x1ede1d(0x100)](_0x34e63f);var _0x5bd6e3=Math[_0x1ede1d(0xf6)](Math['random']()*0x8);if(_0x5bd6e3===0x0)paneltext=_0x1ede1d(0xf7);else{if(_0x5bd6e3===0x1)paneltext=_0x1ede1d(0x107);else{if(_0x5bd6e3===0x2)paneltext=_0x1ede1d(0x101);else{if(_0x5bd6e3===0x3)paneltext=_0x1ede1d(0xfe);else{if(_0x5bd6e3===0x4)paneltext=_0x1ede1d(0x107);else{if(_0x5bd6e3===0x5)paneltext='Just\x20Keep\x20scrolling';else{if(_0x5bd6e3===0x6)paneltext=_0x1ede1d(0xfe);else _0x5bd6e3===0x7&&(paneltext=_0x1ede1d(0xfb)+_0xb772b3);}}}}}}_0x34e63f[_0x1ede1d(0xfa)]=paneltext,gsap[_0x1ede1d(0xfd)](_0x15d670,{'backgroundColor':colors[gsap['utils'][_0x1ede1d(0x103)](0x0,colors[_0x1ede1d(0x105)]-0x1,0x1)],'className':_0x1ede1d(0x104)+_0xb772b3});};
+const locoScroll = new LocomotiveScroll({
+  el: document.querySelector("body"),
+  smooth: true
+}); 
+
+// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+locoScroll.on("scroll", ScrollTrigger.update);
+
+// tell ScrollTrigger to use these proxy methods for the ".smooth-scroll" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy("body", {
+      	scrollTop(value) {
+    			return arguments.length ? locoScroll.scrollTo(value, 0, 0) : 		locoScroll.scroll.instance.scroll.y;
+  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+  getBoundingClientRect() {
+    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
+  },
+pinType: document.querySelector("body").style.transform ? "transform" : "fixed"
+});
+
 
 ScrollTrigger.create({
     trigger: document.body,
-    start: "top top",
+   // trigger: "#next",
+    //pin: document.body,
+    start: "top center",
     end: "bottom bottom",
+    //scroller:"body",
     onUpdate: (self) => {
         let progress = self.progress.toFixed(2);
         if (progress >= 0.9 && self.direction === 1) {
             createPanel(panelNum++);
             ScrollTrigger.refresh();
+            
         }
     },
 });
+
+ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+ScrollTrigger.refresh();
 </script>
 </html>
