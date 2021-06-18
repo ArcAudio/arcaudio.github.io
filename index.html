@@ -56,7 +56,7 @@ const createPanel = (index) => {
     container.appendChild(section);
     section.appendChild(h1);
 
-    var rand = Math.floor(Math.random() * 4);
+    var rand = Math.floor(Math.random() * 8);
     //var paneltext;
 
     if (rand === 0)
@@ -81,7 +81,22 @@ const createPanel = (index) => {
 
     else if (rand === 4)
     {
-        paneltext = `Keep swerving`;
+        paneltext = `Keep scrolling`;
+    }
+
+    else if (rand === 5)
+    {
+        paneltext = `Just Keep scrolling`;
+    }
+
+    else if (rand === 6)
+    {
+        paneltext = `Keep swimming`;
+    }
+
+    else if (rand === 7)
+    {
+        paneltext = `You're only at page number: ${index}`;
     }
 
     h1.innerHTML = paneltext;
