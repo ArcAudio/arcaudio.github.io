@@ -28,84 +28,14 @@
 <script>
 gsap.registerPlugin(ScrollTrigger);
 
-const container = document.querySelector(".container");
-const colors = [
-    "#0FFFFF",
-    "#000000",
-    "#DF367C",
-    "#883955",
-    "#4C3549",
-    "#88498F",
-    "#423E3B",
-    // "#FF4D80",
-    // "#FF3E41",
-    // "#DF367C",
-    // "#883955",
-    // "#4C3549",
-    // "#88498F",
-    // "#423E3B",
-];
+const _0x4988=['629rlrMaf','351mAOtnz','#000001','627782ldVwfz','1328JFjHNZ','1898452XWPcvJ','#883953','733418USAwCO','querySelector','300HPabfN','1KxQOak','873RkWKEH','387kdEzAU','163926KPghwM'];const _0x13b425=_0xf639;(function(_0x5f3af8,_0xc3bc41){const _0x233491=_0xf639;while(!![]){try{const _0x4f26b2=parseInt(_0x233491(0x186))*parseInt(_0x233491(0x183))+-parseInt(_0x233491(0x182))*-parseInt(_0x233491(0x185))+parseInt(_0x233491(0x17e))+parseInt(_0x233491(0x17b))*parseInt(_0x233491(0x180))+-parseInt(_0x233491(0x184))+-parseInt(_0x233491(0x181))*-parseInt(_0x233491(0x188))+-parseInt(_0x233491(0x17c));if(_0x4f26b2===_0xc3bc41)break;else _0x5f3af8['push'](_0x5f3af8['shift']());}catch(_0x45cc74){_0x5f3af8['push'](_0x5f3af8['shift']());}}}(_0x4988,0x5d4e0));function _0xf639(_0x19f146,_0x42d913){return _0xf639=function(_0x4988c3,_0xf63924){_0x4988c3=_0x4988c3-0x17b;let _0xe1e519=_0x4988[_0x4988c3];return _0xe1e519;},_0xf639(_0x19f146,_0x42d913);}const container=document[_0x13b425(0x17f)]('.container'),colors=['#0FFFF0',_0x13b425(0x187),'#DF3672',_0x13b425(0x17d),'#4C3544','#884985','#423E36'];
+
 
 let panelCreated = false;
 let panelNum = 3;
 var paneltext;
 
-const createPanel = (index) => {
-    const section = document.createElement("section");
-    const h1 = document.createElement("h1");
-    container.appendChild(section);
-    section.appendChild(h1);
-
-    var rand = Math.floor(Math.random() * 8);
-    //var paneltext;
-
-    if (rand === 0)
-    {
-        paneltext = `Keep scrolling if you really want to`;
-    }
-
-    else if (rand === 1)
-    {
-        paneltext = `Keep scrolling`;
-    }
-
-    else if (rand === 2)
-    {
-        paneltext = `Just Keep scrolling`;
-    }
-
-    else if (rand === 3)
-    {
-        paneltext = `Keep swimming`;
-    }
-
-    else if (rand === 4)
-    {
-        paneltext = `Keep scrolling`;
-    }
-
-    else if (rand === 5)
-    {
-        paneltext = `Just Keep scrolling`;
-    }
-
-    else if (rand === 6)
-    {
-        paneltext = `Keep swimming`;
-    }
-
-    else if (rand === 7)
-    {
-        paneltext = `You're only at page number: ${index}`;
-    }
-
-    h1.innerHTML = paneltext;
-    
-    gsap.set(section, {
-        backgroundColor: colors[gsap.utils.random(0, colors.length-1, 1)],
-        className: `panel-${index}`
-    }); 
-};
+const _0x309b=['Keep\x20scrolling\x20if\x20you\x20really\x20want\x20to','532713Dztlbl','2592763aMizzr','innerHTML','You\x27re\x20only\x20at\x20page\x20number:\x20','3083CUaDSr','set','Keep\x20swimming','303cNPyJu','appendChild','Just\x20Keep\x20scrolling','583708upbeFp','random','panel-','length','7QuEqac','Keep\x20scrolling','151433WGyahs','1236358Sbbgtb','783964CEuJBo','1bCVENY','floor'];function _0x51ea(_0x4dda68,_0x58690d){return _0x51ea=function(_0x309bab,_0x51ea1a){_0x309bab=_0x309bab-0xf4;let _0x1d2889=_0x309b[_0x309bab];return _0x1d2889;},_0x51ea(_0x4dda68,_0x58690d);}(function(_0x13f04c,_0x2ebeb4){const _0x2fc0f2=_0x51ea;while(!![]){try{const _0x5b481e=-parseInt(_0x2fc0f2(0xf5))*-parseInt(_0x2fc0f2(0xf4))+-parseInt(_0x2fc0f2(0x102))+-parseInt(_0x2fc0f2(0xfc))*-parseInt(_0x2fc0f2(0xff))+-parseInt(_0x2fc0f2(0xf8))+-parseInt(_0x2fc0f2(0x108))*parseInt(_0x2fc0f2(0x106))+-parseInt(_0x2fc0f2(0x109))+parseInt(_0x2fc0f2(0xf9));if(_0x5b481e===_0x2ebeb4)break;else _0x13f04c['push'](_0x13f04c['shift']());}catch(_0x8609b){_0x13f04c['push'](_0x13f04c['shift']());}}}(_0x309b,0xdb412));const createPanel=_0xb772b3=>{const _0x1ede1d=_0x51ea,_0x15d670=document['createElement']('section'),_0x34e63f=document['createElement']('h1');container[_0x1ede1d(0x100)](_0x15d670),_0x15d670[_0x1ede1d(0x100)](_0x34e63f);var _0x5bd6e3=Math[_0x1ede1d(0xf6)](Math['random']()*0x8);if(_0x5bd6e3===0x0)paneltext=_0x1ede1d(0xf7);else{if(_0x5bd6e3===0x1)paneltext=_0x1ede1d(0x107);else{if(_0x5bd6e3===0x2)paneltext=_0x1ede1d(0x101);else{if(_0x5bd6e3===0x3)paneltext=_0x1ede1d(0xfe);else{if(_0x5bd6e3===0x4)paneltext=_0x1ede1d(0x107);else{if(_0x5bd6e3===0x5)paneltext='Just\x20Keep\x20scrolling';else{if(_0x5bd6e3===0x6)paneltext=_0x1ede1d(0xfe);else _0x5bd6e3===0x7&&(paneltext=_0x1ede1d(0xfb)+_0xb772b3);}}}}}}_0x34e63f[_0x1ede1d(0xfa)]=paneltext,gsap[_0x1ede1d(0xfd)](_0x15d670,{'backgroundColor':colors[gsap['utils'][_0x1ede1d(0x103)](0x0,colors[_0x1ede1d(0x105)]-0x1,0x1)],'className':_0x1ede1d(0x104)+_0xb772b3});};
 
 ScrollTrigger.create({
     trigger: document.body,
