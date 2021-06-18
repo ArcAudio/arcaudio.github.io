@@ -48,13 +48,44 @@ const colors = [
 
 let panelCreated = false;
 let panelNum = 3;
+var paneltext;
 
 const createPanel = (index) => {
     const section = document.createElement("section");
     const h1 = document.createElement("h1");
     container.appendChild(section);
     section.appendChild(h1);
-    h1.innerHTML = `Keep scrolling`;
+
+    var rand = Math.floor(Math.random() * 4);
+    //var paneltext;
+
+    if (rand === 0)
+    {
+        paneltext = `Keep scrolling if you really want to`;
+    }
+
+    else if (rand === 1)
+    {
+        paneltext = `Keep scrolling`;
+    }
+
+    else if (rand === 2)
+    {
+        paneltext = `Just Keep scrolling`;
+    }
+
+    else if (rand === 3)
+    {
+        paneltext = `Keep swimming`;
+    }
+
+    else if (rand === 4)
+    {
+        paneltext = `Keep swerving`;
+    }
+
+    h1.innerHTML = paneltext;
+    
     gsap.set(section, {
         backgroundColor: colors[gsap.utils.random(0, colors.length-1, 1)],
         className: `panel-${index}`
